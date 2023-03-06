@@ -34,7 +34,7 @@ int main(){
             if(y>ni)
                 ni=y;
     }
-    cout<<"Norm1="<<n1<<" norm inf="<<ni<<endl;
+    cout<<"Norm="<<n1<<" norm inf="<<ni<<endl;
     for(int T=0;T<5;T++){
         minim=mat[T][0];
         for(int U=0;U<5;U++){
