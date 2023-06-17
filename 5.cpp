@@ -25,6 +25,7 @@ int main(){
     cout << "///////////////////////////////////" << endl;
     for(int T=0;T<N;T++){
         minim=mat[T][0];
+        N=0;
         for(int U=0;U<N;U++){
             if(minim>mat[T][U]){
                 minim=mat[T][U];
