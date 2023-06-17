@@ -9,21 +9,21 @@ a. Двумерное изображение. Изображение состо�
 #include<array>
 #include<ctime>
 
-const int width = 50;
-const int height = 50;
+const int width = 5;
+const int height = 5;
 
 struct Pixels
 {
     int r, g, b;
 };
 
-void FillMatrix(std::array<std::array<Pixels, width>, height> &pic)
+void FillMatrix(std::array<std::array<Pixels, width>, height>& pic)
 {
-    for(int i =0; i < width; i++)
-        for(int j = 0; j < height; j++){
-                pic[i][j].r = rand() % 255;
-                pic[i][j].g = rand() % 255;
-                pic[i][j].b = rand() % 255;
+    for (int i = 0; i < width; i++)
+        for (int j = 0; j < height; j++) {
+            pic[i][j].r = rand() % 255;
+            pic[i][j].g = rand() % 255;
+            pic[i][j].b = rand() % 255;
         }
 
 
@@ -36,11 +36,14 @@ int main()
 
     FillMatrix(matrix);
     int i = 10, j = 10;
-
-    std::cout << "Info of pixel" << std::endl;
-    std::cout << "\t r: " << (int) matrix[i][j].r << std::endl;
-    std::cout << "\t g: " << (int) matrix[i][j].g << std::endl;
-    std::cout << "\t b: " << (int) matrix[i][j].b << std::endl;
+    for(int i = 0; i < width; i++)
+        for(int j=0; j < height; j++)
+        { 
+            std::cout << "Info of pixel[" << i << "][" << j << "]" << std::endl;
+            std::cout << "\t r: " << matrix[i][j].r << std::endl;
+            std::cout << "\t g: " << matrix[i][j].g << std::endl;
+            std::cout << "\t b: " << matrix[i][j].b << std::endl;
+        }
 
 
 
